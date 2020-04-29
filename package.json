@@ -1,5 +1,5 @@
 {
-  "name": "amazon-buddy",
+  "name": "amazon-buddy-new",
   "version": "1.4.7",
   "description": "Amazon Scraper. You can scrape products from amazon search result and you can also scrape reviews from a specific product",
   "main": "index.js",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drawrowfly/amazon-scraper.git"
+    "url": "git+https://github.com/niku2889/amazon-scraper-new.git"
   },
   "keywords": [
     "amazon",
@@ -35,7 +35,7 @@
   "author": "drawrowfly",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/drawrowfly/amazon-scraper/issues"
+    "url": "https://github.com/niku2889/amazon-scraper-new/issues"
   },
-  "homepage": "https://github.com/drawrowfly/amazon-scraper#readme"
+  "homepage": "https://github.com/niku2889/amazon-scraper-new#readme"
 }

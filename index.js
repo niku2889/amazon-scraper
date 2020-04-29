@@ -39,3 +39,17 @@ exports.reviews = options => {
         }
     });
 };
+
+exports.allreviews = options => {
+    options.scrapeType = 'allreviews';
+    if (options.event) {
+        return AmazonScraper(options);
+    }
+    return new Promise(async (resolve, reject) => {
+        try {
+            return resolve(await scraper(options));
+        } catch (error) {
+            return reject(error);
+        }
+    });
+};

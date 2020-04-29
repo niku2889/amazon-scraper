@@ -25,6 +25,9 @@ require('yargs')
     .command('reviews', 'scrape reviews from a product, by providing ASIN', {}, argv => {
         startScraper(argv);
     })
+    .command('allreviews', 'scrape reviews from a product, by providing ASIN', {}, argv => {
+        startScraper(argv);
+    })
     .options({
         help: {
             alias: 'h',
@@ -89,7 +92,7 @@ require('yargs')
         },
     })
     .check(argv => {
-        if (['products', 'reviews'].indexOf(argv['_'][0]) === -1) {
+        if (['products', 'reviews','allreviews'].indexOf(argv['_'][0]) === -1) {
             throw 'Wrong command';
         }
         if (argv['_'][0] === 'products') {
@@ -98,6 +101,11 @@ require('yargs')
             }
         }
         if (argv['_'][0] === 'reviews') {
+            if (!argv.asin || !argv.a) {
+                throw 'AsinId is missing';
+            }
+        }
+        if (argv['_'][0] === 'allreviews') {
             if (!argv.asin || !argv.a) {
                 throw 'AsinId is missing';
             }

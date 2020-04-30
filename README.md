@@ -28,12 +28,12 @@ Useful tool to scrape product information from amazon
 
 **Install from NPM**
 ```sh
-$ npm i -g amazon-buddy
+$ npm i -g amazon-buddy-new
 ```
 
 **Install from YARN**
 ```sh
-$ yarn global add amazon-buddy
+$ yarn global add amazon-buddy-new
 ```
 
 ## USAGE
@@ -41,13 +41,13 @@ $ yarn global add amazon-buddy
 **Terminal**
 
 ```sh
-$ amazon-buddy --help
+$ amazon-buddy-new --help
 
-Usage: amazon-buddy <command> [options]
+Usage: amazon-buddy-new <command> [options]
 
 Commands:
-  amazon-buddy products  scrape products from the provided key word
-  amazon-buddy reviews   scrape reviews from a product
+  amazon-buddy-new products  scrape products from the provided key word
+  amazon-buddy-new reviews   scrape reviews from a product
 
 Options:
   --help, -h     help                                                  [boolean]
@@ -70,16 +70,16 @@ Options:
 
 
 Examples:
-  amazon-buddy products -k 'Xbox one'
-  amazon-buddy products -k 'Xbox one' -h 'www.amazon.fr'
-  amazon-buddy reviews -a B01GW3H3U8
+  amazon-buddy-new products -k 'Xbox one'
+  amazon-buddy-new products -k 'Xbox one' -h 'www.amazon.fr'
+  amazon-buddy-new reviews -a B01GW3H3U8
 ```
 
 **Example 1**
 
 Scrape 40 producs from the "vacume cleaner" keyword and save everything to a CSV file
 ```sh
-$ amazon-buddy products -k 'vacume cleaner' -n 40
+$ amazon-buddy-new products -k 'vacume cleaner' -n 40
 ```
 **The file will be saved in a folder from which you run the script:
 1552945544582_products.csv**
@@ -89,7 +89,7 @@ $ amazon-buddy products -k 'vacume cleaner' -n 40
 Scrape 100 reviews from a product by using ASIN.
 ***NOTE: ASIN is a uniq amazon product ID, it can be found in product URL or if you have scraped product list with our tool you will find it in a CSV file***
 ```sh
-$ amazon-buddy reviews -a B01GW3H3U8 -n 100
+$ amazon-buddy-new reviews -a B01GW3H3U8 -n 100
 ```
 **The file will be saved in a folder from which you run the script:
 1552945544582_B01GW3H3U8_reviews.csv**
@@ -98,7 +98,7 @@ $ amazon-buddy reviews -a B01GW3H3U8 -n 100
 
 Scrape 300 producs from the "xbox one" keyword with rating minimum rating 3 and maximum rating 4 and save everything to a CSV file
 ```sh
-$ amazon-buddy products -k 'xbox one' -n 300 --min-rating 3 --max-rating 4
+$ amazon-buddy-new products -k 'xbox one' -n 300 --min-rating 3 --max-rating 4
 ```
 **The file will be saved in a folder from which you run the script:
 1552945544582_products.csv**
@@ -106,7 +106,7 @@ $ amazon-buddy products -k 'xbox one' -n 300 --min-rating 3 --max-rating 4
 
 ### Promise
 ```javascript
-const amazonScraper = require('amazon-buddy');
+const amazonScraper = require('amazon-buddy-new');
 
 (async() => {
     try{
@@ -129,7 +129,7 @@ const amazonScraper = require('amazon-buddy');
 * You won't be able to use promises.
 * {sort} and {save} will be ignored
 ```javascript
-const amazonScraper = require('amazon-buddy');
+const amazonScraper = require('amazon-buddy-new');
 
 let products = amazonScraper.products({
     keyword: 'xbox',

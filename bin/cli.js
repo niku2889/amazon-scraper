@@ -90,6 +90,21 @@ require('yargs')
             type: 'string',
             describe: 'The custom amazon host (can be www.amazon.fr, www.amazon.de, etc.)',
         },
+        userName: {
+            alias: 'U',
+            type: 'string',
+            describe: 'The proxy user name',
+        },
+        password: {
+            alias: 'P',
+            type: 'string',
+            describe: 'The proxy password',
+        },
+        port: {
+            alias: 'Port',
+            type: 'string',
+            describe: 'The proxy port',
+        },
     })
     .check(argv => {
         if (['products', 'reviews','allreviews'].indexOf(argv['_'][0]) === -1) {

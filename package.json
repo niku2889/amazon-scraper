@@ -1,6 +1,6 @@
 {
   "name": "amazon-buddy-new",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Amazon Scrapernpm publish. You can scrape products from amazon search result and you can also scrape reviews from a specific product",
   "main": "index.js",
   "bin": {

@@ -33,7 +33,7 @@
     "scraper"
   ],
   "author": "niku2889",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/niku2889/amazon-scraper-new/issues"
